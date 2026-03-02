@@ -16,7 +16,7 @@ const Contacto = () => {
     useEffect(() => {
 
         setTimeout(() => setShowImage(true), 200);
-        setTimeout(() => setShowInfo(true), 1200)
+        setTimeout(() => setShowInfo(true), 800)
     }, [])
 
 
@@ -51,18 +51,20 @@ const Contacto = () => {
 
             
                     <div className="Contacto-links">
-                        <a href="mailto:info@mode-studio.es" className={`Contacto-email ${showInfo ? "slide-in" : ""}`}
-                            style={{ transitionDelay: "0.5s" }}>
-                            info@mode-studio.es
-                        </a>
+                      
                         <a
                             className={`Contacto-instagram ${showInfo ? "slide-in" : ""}`}
                             href="https://www.instagram.com/mode_estudio/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ transitionDelay: "1.8s" }}
+                            style={{ transitionDelay: "0.25s" }}
                         >
                             Instagram
+                        </a>
+
+                          <a href="mailto:info@mode-studio.es" className={`Contacto-email ${showInfo ? "slide-in" : ""}`}
+                            style={{ transitionDelay: "0.1s" , marginTop:'0.5rem'}}>
+                            info@mode-studio.es
                         </a>
                     </div>
 
@@ -80,15 +82,15 @@ const Contacto = () => {
                         </div>
 
                         <p className={`Contacto-direccion ${showInfo ? "slide-in" : ""}`}
-                            style={{ transitionDelay: "2.3s" }}>
+                            style={{ transitionDelay: "0.4s" }}>
                             c/Duque de Calabria, 13
                         </p>
                         <p className={`Contacto-direccion ${showInfo ? "slide-in" : ""}`}
-                            style={{ transitionDelay: "2.3s" }}>
+                            style={{ transitionDelay: "0.55s" }}>
                             46005,
                         </p>
                         <p className={`Contacto-direccion ${showInfo ? "slide-in" : ""}`}
-                            style={{ transitionDelay: "2.3s" }}>
+                            style={{ transitionDelay: "0.7s" }}>
                             Valencia
                         </p>
                     </div>

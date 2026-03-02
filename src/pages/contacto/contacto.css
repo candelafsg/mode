@@ -47,8 +47,8 @@
 .Contacto-email, .Contacto-direccion {
     color: var(--text);
     font-style: oblique;
-    transform: translateX(-500px);
-    transition: opacity 1s ease, transform 1s ease;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.6s ease;
 }
 
 
@@ -61,8 +61,8 @@
     display: block;
     color: var(--text-secondary);
     font-style: oblique;
-    transform: translateX(-500px);
-    transition: opacity 1s ease, transform 1s ease;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.6s ease;
 }
 
 .Contenedor-imag {
@@ -88,7 +88,7 @@
 
 .Contacto-email, .Contacto-direccion, .Contacto-instagram {
     opacity: 0;
-    transform: translateX(-500px);
+    transform: translateY(30px);
 }
 
 
@@ -104,8 +104,9 @@
 
 .slide-in {
     opacity: 1;
-    transform: translateX(0);
-    transition: opacity 1s ease, transform 1.8s ease;}
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.6s ease;
+}
 
 
 

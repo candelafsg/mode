@@ -84,7 +84,7 @@ export const Header = () => {
                                 {
                                     itemsMenu.map((item, index) => (
                                         <li key={index} className={`Menu-li ${showInfo ? "slide-in" : ""}`} style={{
-                                            transitionDelay: `${index * 0.5}s`
+                                            transitionDelay: `${index * 0.15}s`
                                         }}>
                                             <NavLink to={item.path} className="Menu-link">
                                                 {item.label}
