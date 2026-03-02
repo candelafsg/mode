@@ -85,10 +85,16 @@ const Home = () => {
 
                                 {
                                     proyectos.map((proyecto, id) => {
-
+                                        // Debug: mostrar los valores que se están usando
+                                        console.log('Proyecto ID:', proyecto._id, '$oid:', proyecto._id.$oid);
+                                        
+                                        // Asegurarnos de que el ID sea un string
+                                        const projectId = proyecto._id.$oid || proyecto._id;
+                                        console.log('ProjectId final:', projectId, 'Tipo:', typeof projectId);
+                                        
                                         return (
 
-                                            <NavLink key={proyecto._id} to={`/proyectos/${proyecto._id}`}><li data-index={id} className="Galeria-li ">
+                                            <NavLink key={projectId} to={`/proyectos/${projectId}`}><li data-index={id} className="Galeria-li ">
                                                 <div className="Galeria-contenedor " >
                                                     <div className="Galeria-nombre">{proyecto.nombre}</div>
                                                     <img loading="lazy" src={proyecto.portada} alt={proyecto.nombre} className="Galeria-img " />

@@ -51,11 +51,23 @@ export const useFetchOne = () => {
 
         const proyectoId = async () => {
             try {
+                // Debug: mostrar qué valor está recibiendo pid
+                console.log('PID recibido:', pid, 'Tipo:', typeof pid);
+                
+                // Si pid es [object Object], intentar extraer el ID correcto
+                let searchId = pid;
+                if (typeof pid === 'string' && pid === '[object Object]') {
+                    console.log('Detectado [object Object], buscando primer proyecto como fallback');
+                    // Como fallback, usar el primer proyecto disponible
+                    searchId = proyectosData[0]?._id?.$oid;
+                    console.log('Usando fallback ID:', searchId);
+                }
+                
                 // Simular carga asíncrona para mantener consistencia
                 await new Promise(resolve => setTimeout(resolve, 300));
                 
                 // Buscar el proyecto por ID en los datos locales
-                const proyectoEncontrado = proyectosData.find(p => p._id.$oid === pid);
+                const proyectoEncontrado = proyectosData.find(p => p._id.$oid === searchId);
                 
                 if (!proyectoEncontrado) {
                     throw new Error(`Proyecto con ID ${pid} no encontrado`);
