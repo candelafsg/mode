@@ -2,9 +2,9 @@
 import { Header } from "../../components/header/Header";
 import './home.css'
 
-import { useScroll } from "../../../hooks/UseScroll";
+import { useScroll } from "../../hooks/UseScroll";
 import { useEffect, useRef, useState } from "react";
-import { useFetchAll } from "../../../hooks/useFetch";
+import { useFetchAll } from "../../hooks/useFetch";
 import { NavLink } from "react-router-dom";
 
 

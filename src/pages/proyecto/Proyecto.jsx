@@ -1,5 +1,6 @@
-import { useFetchOne } from "../../../hooks/useFetch";
 import './proyecto.css'
+import {useFetchOne} from "../../hooks/useFetch";
+import { useParams } from "react-router";
 import { useEffect, useState, useRef } from "react";
 import { Header } from "../../components/header/Header";
 import { Lightbox } from "../../components/lightbox/Lightbox";
@@ -151,7 +152,7 @@ const Proyecto = () => {
                                      
                                         return (
 
-                                            <li ref={(el) => (imgRefs.current[id] = el)} onClick={() => openLightbox(id)} className='Galeria-mansory-item' key={imgUrl._id || id}><img loading="lazy" src={imgUrl} alt={`Imagen ${id}`} className="Galeria-imgProyecto" /></li>
+                                            <li ref={(el) => (imgRefs.current[id] = el)} onClick={() => openLightbox(id)} className='Galeria-mansory-item' key={id}><img loading="lazy" src={imgUrl} alt={`Imagen ${id}`} className="Galeria-imgProyecto" /></li>
                                         )
                                     })
                                 }
